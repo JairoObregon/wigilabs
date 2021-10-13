@@ -1,0 +1,130 @@
+
+
+#sidemenu{
+    background-color: black;
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+#sidemenu a{
+    color: white;
+    text-decoration: none;
+}
+
+/*header*/
+
+#sidemenu #header{
+    /*el width siempre se toma como base+margin+pading*/
+    /*en este caso decimos que solo hay la base*/
+    box-sizing: border-box;
+    margin: 15px 0 30px 0;
+}
+#sidemenu #header #title{
+    box-sizing: border-box;
+    /*cuando se tiene un exceso esta propiedad no los muestra*/
+    overflow: hidden;
+}
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+#sidemenu #header #menu-btn{
+    display: inline-block;
+}
+#sidemenu #header #menu-btn{
+    right: 0px;
+    cursor: pointer;
+    /*padding: 10px;
+*/   /* width: var(--width-collapse);*/
+   width: 10%;
+    box-sizing: border-box;
+}
+
+
+#sidemenu #header #menu-btn .btn-hamburger{
+    background-color:  white ;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0; 
+}
+
+
+/*item*/
+
+#sidemenu #menu-items{
+    overflow: hidden;
+    height: 100%;
+    margin-top: 20px;
+}
+
+
+/*separdor*/
+#sidemenu #menu-items .item.separador{
+    height: 1px;
+    margin: 15px 0;
+}
+
+/* */
+.menu-expanded{
+    width: var(--width);
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+.menu-expanded #header #title span{
+
+    width: calc(var(--width) - var(--width-collapse) -5px);
+    overflow: hidden;
+
+}
+.menu-expanded #profile #photo{
+    width: 200px;
+}
+.menu-expanded #profile #name{
+    width: 100%;
+}
+.menu-collapsed{
+    width: var(--width-collapse);
+
+}
+.menu-collapsed #header #title{
+    display: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.menu-collapsed #header #menu-btn{
+    padding: 0 35%;
+    margin: 7.5px 0;
+    width: 100% !important;
+}
+  
+.menu-collapsed #profile #name{
+    display: none;
+}
+.menu-collapsed .item {
+    width: 100px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .menu-expanded{
+        width: 100%;
+    }
+
+    .menu-collapsed{
+        width: 50px !important;
+    }
+
+    #sidemenu #menu-items .item .icon{
+        width: 50px !important;
+        font-size: 20px !important;
+    }
+
+}

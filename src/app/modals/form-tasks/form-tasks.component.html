@@ -1,0 +1,66 @@
+<div
+    class="modal fade "
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Nueva Tarea</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            #closebutton 
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="form">
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Nombre: </label>
+            <div class="col-sm-10">
+              <input type="text" formControlName="name" class="form-control">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Latitud: </label>
+            <div class="col-sm-10">
+              <input type="number" formControlName="latitud" step="0.01" class="form-control">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Longitud: </label>
+            <div class="col-sm-10">
+              <input type="number" formControlName="longitud" step="0.01" class="form-control">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Activado: </label>
+            <div class="col-sm-10" style="
+            display: flex;
+            align-items: center;
+        ">
+              <input class="form-check-input mt-0" formControlName="isActive" type="checkbox" value="" id="flexCheckDefault">
+
+            </div>
+          </div>
+
+        </form>
+        </div>
+       
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Descartar
+          </button>
+          <button type="button" class="btn btn-primary dissabled" [disabled]="!form.valid" (click)="add()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>

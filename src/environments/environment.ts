@@ -3,7 +3,25 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  firebase: {
+    projectId: 'wigilabs-53dcd',
+    appId: '1:71876940015:web:9eff86210e9e006ef60b1a',
+    databaseURL: 'https://wigilabs-53dcd-default-rtdb.firebaseio.com',
+    storageBucket: 'wigilabs-53dcd.appspot.com',
+    locationId: 'us-central',
+    apiKey: 'AIzaSyAmmSW_egqjNO3NoGRaBB2brRcmKYlinEA',
+    authDomain: 'wigilabs-53dcd.firebaseapp.com',
+    messagingSenderId: '71876940015',
+  },
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyAmmSW_egqjNO3NoGRaBB2brRcmKYlinEA",
+    authDomain: "wigilabs-53dcd.firebaseapp.com",
+    projectId: "wigilabs-53dcd",
+    storageBucket: "wigilabs-53dcd.appspot.com",
+    messagingSenderId: "71876940015",
+    appId: "1:71876940015:web:9eff86210e9e006ef60b1a"
+  }
 };
 
 /*

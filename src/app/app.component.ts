@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wigilabs';
+  toggle:boolean = false
+
+  toggleChanged(e:any){
+    this.toggle=!e
+  }
 }

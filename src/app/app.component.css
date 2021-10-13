@@ -1,0 +1,13 @@
+.menu-collapsed{
+    margin-left: -240px;
+}
+
+@media only screen and (max-width: 600px) {
+    .show{
+        display: none;
+    }
+
+    .menu-collapsed{
+        margin-left: -290px;
+    }
+}

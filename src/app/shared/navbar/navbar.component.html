@@ -1,0 +1,20 @@
+<div id="sidemenu" class="menu-expanded"  [ngClass]="{'menu-expanded' : toggle, 'menu-collapsed' : !toggle}">
+    <!--   header -->
+    <div id="header">
+        <div id="title">
+            <h3 class="mb-0"> WIGILABS </h3>
+        </div>
+        <div id="menu-btn" (click)="toggleMenu()">
+            <div class="btn-hamburger"></div>
+            <div class="btn-hamburger"></div>
+            <div class="btn-hamburger"></div>
+        </div>
+    </div>
+
+    <div id="menu-items" >
+        <ng-container *ngFor="let element of elements">
+            <app-element-navbar [element]="element"></app-element-navbar>
+        </ng-container>
+        
+    </div>
+</div>

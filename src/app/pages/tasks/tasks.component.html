@@ -1,0 +1,45 @@
+<section class="container-fluid my-5">
+  <div class="">
+    <button
+      type="button"
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Nueva Tarea
+    </button>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let task of tasks">
+      <div class="col col-md-6 col-xl-3">
+        <div class="card my-3">
+          <h5 class="card-header">{{ task.data.name }}</h5>
+          <div class="my-2">
+            <div style="padding-left: 16px">
+              <strong> Latitud:</strong> <span>{{ task.data.latitud }}</span>
+            </div>
+            <div style="padding-left: 16px">
+              <strong> Longitud:</strong> <span>{{ task.data.longitud }}</span>
+            </div>
+            <div style="padding-left: 16px">
+              <strong *ngIf="task.data.isActive" style="color: greenyellow;"> Disponible</strong>
+              <strong *ngIf="!task.data.isActive" style="color: red;"> Terminado</strong>
+            </div>
+            <div class="px-3 py-3">
+              <button
+                href="#"
+                class="btn btn-danger"
+                (click)="deleteTask(task.id)"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Modal -->
+  <app-form-tasks></app-form-tasks>
+</section>

@@ -1,0 +1,35 @@
+.item{
+    width: var(--width);
+    cursor: pointer;
+}   
+
+.icon, 
+.title{
+    color: white !important;
+    font-size: 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+.item a{
+    display: block
+}
+.item a:hover{
+    background-color: #444144;
+}
+.icon{
+    text-align: center;
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--width-collapse);
+    font-size: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .item .icon{
+        width: 50px !important;
+        font-size: 20px !important;
+    }
+
+}

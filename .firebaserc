@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wigilabs-53dcd"
+  },
+  "targets": {
+    "wigilabs-53dcd": {
+      "hosting": {
+        "wigilabs": [
+          "wigilabs-53dcd"
+        ]
+      }
+    }
+  }
+}

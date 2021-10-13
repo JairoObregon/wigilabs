@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "0a0564ef-1104-4cf6-9116-a53c6b08a56c"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -97,6 +100,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "wigilabs:build:production",
+            "firebaseProject": "wigilabs-53dcd",
+            "firebaseHostingSite": "wigilabs-53dcd"
           }
         }
       }
